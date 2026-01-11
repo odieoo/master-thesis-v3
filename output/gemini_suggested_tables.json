@@ -1,0 +1,154 @@
+{
+  "albums_by_id": [
+    "album_id",
+    "title",
+    "artist_id",
+    "artist_name"
+  ],
+  "albums_by_artist": [
+    "artist_id",
+    "album_id",
+    "title"
+  ],
+  "artists": [
+    "artist_id",
+    "name"
+  ],
+  "tracks_by_id": [
+    "track_id",
+    "track_name",
+    "album_id",
+    "album_title",
+    "artist_id",
+    "artist_name",
+    "media_type_id",
+    "media_type_name",
+    "genre_id",
+    "genre_name",
+    "composer",
+    "milliseconds",
+    "bytes",
+    "unit_price"
+  ],
+  "tracks_by_album": [
+    "album_id",
+    "track_id",
+    "track_name",
+    "composer",
+    "milliseconds",
+    "bytes",
+    "unit_price",
+    "media_type_id",
+    "media_type_name",
+    "genre_id",
+    "genre_name",
+    "artist_id",
+    "artist_name"
+  ],
+  "tracks_by_genre": [
+    "genre_id",
+    "track_id",
+    "track_name",
+    "composer",
+    "milliseconds",
+    "bytes",
+    "unit_price",
+    "album_id",
+    "album_title",
+    "artist_id",
+    "artist_name",
+    "media_type_id",
+    "media_type_name"
+  ],
+  "genres": [
+    "genre_id",
+    "name"
+  ],
+  "media_types": [
+    "media_type_id",
+    "name"
+  ],
+  "customers_by_id": [
+    "customer_id",
+    "first_name",
+    "last_name",
+    "company",
+    "address",
+    "city",
+    "state",
+    "country",
+    "postal_code",
+    "phone",
+    "fax",
+    "email",
+    "support_rep_id",
+    "support_rep_first_name",
+    "support_rep_last_name"
+  ],
+  "invoices_by_customer": [
+    "customer_id",
+    "invoice_id",
+    "invoice_date",
+    "billing_address",
+    "billing_city",
+    "billing_state",
+    "billing_country",
+    "billing_postal_code",
+    "total"
+  ],
+  "invoice_items_by_invoice": [
+    "invoice_id",
+    "invoice_line_id",
+    "track_id",
+    "track_name",
+    "album_title",
+    "artist_name",
+    "unit_price",
+    "quantity",
+    "customer_id",
+    "invoice_date",
+    "total"
+  ],
+  "employees_by_id": [
+    "employee_id",
+    "last_name",
+    "first_name",
+    "title",
+    "reports_to",
+    "reports_to_first_name",
+    "reports_to_last_name",
+    "birth_date",
+    "hire_date",
+    "address",
+    "city",
+    "state",
+    "country",
+    "postal_code",
+    "phone",
+    "fax",
+    "email"
+  ],
+  "employees_by_manager": [
+    "reports_to",
+    "employee_id",
+    "first_name",
+    "last_name",
+    "title",
+    "email"
+  ],
+  "playlists_by_id": [
+    "playlist_id",
+    "name"
+  ],
+  "playlist_tracks_by_playlist": [
+    "playlist_id",
+    "track_id",
+    "track_name",
+    "composer",
+    "milliseconds",
+    "album_title",
+    "artist_name",
+    "genre_name",
+    "media_type_name"
+  ]
+}

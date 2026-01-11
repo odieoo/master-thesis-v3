@@ -1,0 +1,80 @@
+{
+  "employees_data": [
+    "employees.EmployeeId",
+    "employees.LastName",
+    "employees.FirstName",
+    "employees.Title",
+    "employees.ReportsTo",
+    "employees.HireDate",
+    "employees.Address",
+    "employees.City",
+    "employees.State",
+    "employees.Country",
+    "employees.Phone",
+    "employees.Fax",
+    "employees.Email"
+  ],
+  "customers_data": [
+    "customers.FirstName",
+    "customers.LastName",
+    "customers.Company",
+    "customers.City",
+    "customers.State",
+    "customers.Country",
+    "customers.Phone",
+    "customers.Fax",
+    "customers.SupportRepId"
+  ],
+  "media_types_tracks_data": [
+    "media_types.MediaTypeId",
+    "media_types.Name",
+    "tracks.TrackId",
+    "tracks.Name",
+    "tracks.MediaTypeId",
+    "tracks.Composer",
+    "tracks.Milliseconds",
+    "tracks.Bytes",
+    "tracks.UnitPrice"
+  ],
+  "invoice_items_data": [
+    "invoice_items.InvoiceLineId",
+    "invoice_items.InvoiceId",
+    "invoice_items.TrackId",
+    "invoice_items.UnitPrice",
+    "invoice_items.Quantity"
+  ],
+  "genres_tracks_data": [
+    "genres.GenreId",
+    "genres.Name",
+    "tracks.GenreId"
+  ],
+  "customers_employees_data": [
+    "customers.PostalCode",
+    "employees.PostalCode"
+  ],
+  "invoices_data": [
+    "invoices.InvoiceId",
+    "invoices.CustomerId",
+    "invoices.InvoiceDate",
+    "invoices.BillingAddress",
+    "invoices.BillingCity",
+    "invoices.BillingState",
+    "invoices.BillingCountry",
+    "invoices.BillingPostalCode",
+    "invoices.Total"
+  ],
+  "albums_artists_tracks_data": [
+    "albums.AlbumId",
+    "albums.Title",
+    "albums.ArtistId",
+    "artists.ArtistId",
+    "artists.Name",
+    "tracks.AlbumId"
+  ],
+  "playlist_track_playlists_data": [
+    "playlists.PlaylistId",
+    "playlists.Name",
+    "playlist_track.PlaylistId",
+    "playlist_track.TrackId"
+  ]
+}
