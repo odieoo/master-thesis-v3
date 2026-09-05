@@ -1,4 +1,4 @@
-# SQLite to Cassandra Migration Methodology
+# MYSQL to Cassandra Migration Methodology
 ## Master Thesis Plan (Version 2.0)
 
 ---
@@ -9,7 +9,7 @@
 **"A Hybrid Semantic and Query-Driven Methodology for Automated Migration from Relational Databases to Apache Cassandra"**
 
 ### 1.2 Problem Statement
-Organizations need to migrate from relational databases (SQLite) to NoSQL databases (Cassandra) for scalability. Current approaches either:
+Organizations need to migrate from relational databases MYSQL DVD DELL database to NoSQL databases (Cassandra) for scalability. Current approaches either:
 - Require **manual decisions** (Dourhri et al.)
 - Assume **query patterns are known** (Zaidi et al.)
 - **Ignore semantic relationships** between columns
@@ -43,7 +43,7 @@ A **hybrid automated approach** that combines:
 │     │                                                                       │
 │     ▼                                                                       │
 │   ┌─────────────────────────────────────────────────────────────────────┐  │
-│   │  A. INPUT: SQLite Database (chinook.db)                             │  │
+│   │  A. INPUT: MYSQL (DVD DELL database)                          │  │
 │   └─────────────────────────────────────────────────────────────────────┘  │
 │     │                                                                       │
 │     ▼                                                                       │
@@ -172,7 +172,7 @@ A **hybrid automated approach** that combines:
 │   │     • CREATE KEYSPACE statement                                     │  │
 │   │     • CREATE TABLE statements                                       │  │
 │   │     • CREATE INDEX for secondary patterns                           │  │
-│   │     • Map data types (SQLite → CQL)                                 │  │
+│   │     • Map data types (MYSQL → CQL)                                 │  │
 │   └─────────────────────────────────────────────────────────────────────┘  │
 │     │                                                                       │
 │     ▼                                                                       │
@@ -182,7 +182,7 @@ A **hybrid automated approach** that combines:
 │     │                                                                       │
 │     ▼                                                                       │
 │   ┌─────────────────────────────────────────────────────────────────────┐  │
-│   │  N. Extract Data from SQLite                                        │  │
+│   │  N. Extract Data from MYSQL                                        │  │
 │   │     • Read tables using pandas                                      │  │
 │   │     • Preserve data types                                           │  │
 │   └─────────────────────────────────────────────────────────────────────┘  │
@@ -243,7 +243,7 @@ A **hybrid automated approach** that combines:
 │   │  U. Test Query Performance                                          │  │
 │   │     • Execute benchmark queries                                     │  │
 │   │     • Measure latency (p50, p99)                                    │  │
-│   │     • Compare SQLite vs Cassandra                                   │  │
+│   │     • Compare MYSQL vs Cassandra                                   │  │
 │   └─────────────────────────────────────────────────────────────────────┘  │
 │     │                                                                       │
 │     ▼                                                                       │
@@ -272,7 +272,7 @@ flowchart TD
     START([START]) --> A
     
     subgraph P1 [PHASE 1: Schema Analysis]
-        A[A: SQLite Database] --> B[B: Extract Schema]
+        A[A: MYSQL Database] --> B[B: Extract Schema]
         B --> C[C: Build ER Graph]
         B --> D[D: Preprocess Columns]
         D --> E[E: Semantic Analysis]
@@ -297,7 +297,7 @@ flowchart TD
     end
     
     subgraph P4 [PHASE 4: Data Migration]
-        M --> N[N: Extract from SQLite]
+        M --> N[N: Extract from MYSQL]
         A --> N
         N --> O[O: Transform Data]
         K --> O
@@ -363,7 +363,7 @@ Using the **Chinook Database** as our example:
 │  ──────────────────────                                                     │
 │                                                                             │
 │  1. Get tables:                                                             │
-│     SELECT name FROM sqlite_master WHERE type='table';                      │
+│     SELECT name FROM MYSQL_master WHERE type='table';                      │
 │                                                                             │
 │  2. Get columns (for each table):                                           │
 │     PRAGMA table_info(albums);                                              │
@@ -1134,7 +1134,7 @@ Using the **Chinook Database** as our example:
 │                                                                             │
 │  ┌──────────────────────────────────────────────────────────────────────┐  │
 │  │                                                                      │  │
-│  │   SQLite (11 tables)  ──────────►  Cassandra (5-9 tables)           │  │
+│  │   MYSQL (11 tables)  ──────────►  Cassandra (5-9 tables)           │  │
 │  │                                                                      │  │
 │  │   HIGH Priority:   5 dedicated tables (handles 64% of queries)       │  │
 │  │   MEDIUM Priority: 4 tables or SAI (handles 16% of queries)          │  │
@@ -2072,7 +2072,7 @@ flowchart LR
 ```mermaid
 flowchart TB
     subgraph input [INPUT]
-        DB[(SQLite Database)]
+        DB[(MYSQL Database)]
     end
     
     subgraph phase1 [PHASE 1: Understand Schema]
@@ -2119,7 +2119,7 @@ flowchart TB
 │ PHASE 1: UNDERSTAND SCHEMA                                               │
 │ ─────────────────────────                                                │
 │                                                                          │
-│   SQLite DB ──► Schema Extractor ──► ER Graph (FK relationships)        │
+│   MYSQL DB ──► Schema Extractor ──► ER Graph (FK relationships)        │
 │                      │                                                   │
 │                      ▼                                                   │
 │              Column Preprocessor ──► Clean column names                  │
@@ -2173,11 +2173,11 @@ flowchart TB
 │ PHASE 4: MIGRATE DATA                                                    │
 │ ────────────────────                                                     │
 │                                                                          │
-│   SQLite ──► Extract ──► Transform (JOIN + Denormalize) ──► Load        │
+│   MYSQL ──► Extract ──► Transform (JOIN + Denormalize) ──► Load        │
 │                                                                          │
 │   Example transformation:                                                │
 │   ┌────────────────────┐      ┌─────────────────────────────────────┐   │
-│   │ tracks (SQLite)    │      │ tracks_by_album (Cassandra)         │   │
+│   │ tracks (MYSQL)    │      │ tracks_by_album (Cassandra)         │   │
 │   │ ├── TrackId        │  ──► │ ├── album_id (partition key)        │   │
 │   │ ├── Name           │      │ ├── track_id (clustering key)       │   │
 │   │ ├── AlbumId (FK)   │      │ ├── track_name                      │   │
@@ -2233,17 +2233,17 @@ flowchart LR
 #### Module 1: Schema Extractor
 **File:** `utils/schema_extractor.py`
 
-**Purpose:** Extract complete metadata from SQLite database
+**Purpose:** Extract complete metadata from MYSQL database
 
 ```
-INPUT:  SQLite database file (chinook.db)
+INPUT:  MYSQL database file (DVD DELL)
 OUTPUT: schema.json
 
 ┌─────────────────────────────────────────────────────────────┐
 │                     EXTRACTION PROCESS                      │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  1. Get tables ──► SELECT name FROM sqlite_master           │
+│  1. Get tables ──► SELECT name FROM MYSQL           │
 │                                                             │
 │  2. Get columns ──► PRAGMA table_info(table_name)           │
 │                                                             │
@@ -2589,7 +2589,7 @@ OUTPUT: schema.cql file
 │                 DATA TYPE MAPPING                           │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│   SQLite Type    │    CQL Type    │    Notes               │
+│   MYSQL Type    │    CQL Type    │    Notes               │
 │   ───────────────┼────────────────┼────────────────────    │
 │   INTEGER        │    int/bigint  │    bigint for large    │
 │   TEXT           │    text        │    direct mapping      │
@@ -2609,7 +2609,7 @@ OUTPUT: schema.cql file
 **Purpose:** Extract, transform, and load data
 
 ```
-INPUT:  SQLite data + Transformation rules
+INPUT:  MYSQL data + Transformation rules
 OUTPUT: CSV files + Load scripts
 
 ┌─────────────────────────────────────────────────────────────┐
@@ -2691,7 +2691,7 @@ OUTPUT: Validation report
 │  │ Check 4: Query Performance                          │   │
 │  │ ─────────────────────────                           │   │
 │  │ Query: Get tracks by album                          │   │
-│  │ SQLite: 45ms                                        │   │
+│  │ MYSQL: 45ms                                        │   │
 │  │ Cassandra: 8ms                                      │   │
 │  │ Improvement: 5.6x faster                            │   │
 │  │ Status: ✓ PASS                                      │   │
@@ -2764,7 +2764,7 @@ flowchart LR
     end
     
     subgraph thesis [This Thesis]
-        T1[SQLite] --> T2[Automated]
+        T1[MYSQL] --> T2[Automated]
         T2 --> T3[Semantic + ER + Logs]
         T3 --> T4[Cassandra]
     end
@@ -2772,7 +2772,7 @@ flowchart LR
 
 | Feature | Dourhri | Zaidi | **This Thesis** |
 |---------|---------|-------|-----------------|
-| Source DB | PostgreSQL | MySQL | SQLite |
+| Source DB | PostgreSQL | 
 | Target DB | Cassandra | MongoDB | Cassandra |
 | Automation | GUI-assisted | Partial | **Fully automated** |
 | Relationship Detection | FK only | FK only | **FK + Semantic** |
@@ -2847,8 +2847,8 @@ flowchart LR
 │  2. OLTP Focus                                              │
 │     └── Optimized for transactional, not analytical         │
 │                                                             │
-│  3. SQLite Specific                                         │
-│     └── Uses PRAGMA commands (not portable to MySQL)        │
+│  3. MYSQL Specific                                         │
+│     └── Uses PRAGMA commands         │
 │                                                             │
 │  4. Small Test Dataset                                      │
 │     └── Chinook is ~1MB (not production-scale)              │

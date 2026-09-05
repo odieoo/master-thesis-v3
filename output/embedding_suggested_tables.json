@@ -1,80 +1,65 @@
 {
-  "employees_data": [
-    "employees.EmployeeId",
-    "employees.LastName",
-    "employees.FirstName",
-    "employees.Title",
-    "employees.ReportsTo",
-    "employees.HireDate",
-    "employees.Address",
-    "employees.City",
-    "employees.State",
-    "employees.Country",
-    "employees.Phone",
-    "employees.Fax",
-    "employees.Email"
-  ],
   "customers_data": [
-    "customers.FirstName",
-    "customers.LastName",
-    "customers.Company",
-    "customers.City",
-    "customers.State",
-    "customers.Country",
-    "customers.Phone",
-    "customers.Fax",
-    "customers.SupportRepId"
+    "customers.CITY",
+    "customers.STATE",
+    "customers.ZIP",
+    "customers.COUNTRY",
+    "customers.REGION",
+    "customers.EMAIL",
+    "customers.PHONE",
+    "customers.PASSWORD",
+    "customers.AGE",
+    "customers.INCOME"
   ],
-  "media_types_tracks_data": [
-    "media_types.MediaTypeId",
-    "media_types.Name",
-    "tracks.TrackId",
-    "tracks.Name",
-    "tracks.MediaTypeId",
-    "tracks.Composer",
-    "tracks.Milliseconds",
-    "tracks.Bytes",
-    "tracks.UnitPrice"
+  "orderlines_orders_reorder_data": [
+    "orderlines.ORDERDATE",
+    "orders.ORDERDATE",
+    "reorder.DATE_LOW",
+    "reorder.QUAN_LOW",
+    "reorder.DATE_REORDERED",
+    "reorder.QUAN_REORDERED",
+    "reorder.DATE_EXPECTED"
   ],
-  "invoice_items_data": [
-    "invoice_items.InvoiceLineId",
-    "invoice_items.InvoiceId",
-    "invoice_items.TrackId",
-    "invoice_items.UnitPrice",
-    "invoice_items.Quantity"
+  "cust_hist_customers_data": [
+    "cust_hist.CUSTOMERID",
+    "customers.CUSTOMERID",
+    "customers.FIRSTNAME",
+    "customers.LASTNAME",
+    "customers.ADDRESS1",
+    "customers.ADDRESS2",
+    "customers.USERNAME",
+    "customers.GENDER"
   ],
-  "genres_tracks_data": [
-    "genres.GenreId",
-    "genres.Name",
-    "tracks.GenreId"
+  "categories_inventory_products_data": [
+    "categories.CATEGORY",
+    "categories.CATEGORYNAME",
+    "inventory.SALES",
+    "products.CATEGORY",
+    "products.TITLE",
+    "products.ACTOR",
+    "products.PRICE",
+    "products.SPECIAL"
   ],
-  "customers_employees_data": [
-    "customers.PostalCode",
-    "employees.PostalCode"
+  "cust_hist_orderlines_data": [
+    "cust_hist.ORDERID",
+    "orderlines.ORDERLINEID",
+    "orderlines.ORDERID",
+    "orderlines.PROD_ID",
+    "orderlines.QUANTITY"
   ],
-  "invoices_data": [
-    "invoices.InvoiceId",
-    "invoices.CustomerId",
-    "invoices.InvoiceDate",
-    "invoices.BillingAddress",
-    "invoices.BillingCity",
-    "invoices.BillingState",
-    "invoices.BillingCountry",
-    "invoices.BillingPostalCode",
-    "invoices.Total"
+  "cust_hist_inventory_products_reorder_data": [
+    "cust_hist.PROD_ID",
+    "inventory.PROD_ID",
+    "inventory.QUAN_IN_STOCK",
+    "products.PROD_ID",
+    "products.COMMON_PROD_ID",
+    "reorder.PROD_ID"
   ],
-  "albums_artists_tracks_data": [
-    "albums.AlbumId",
-    "albums.Title",
-    "albums.ArtistId",
-    "artists.ArtistId",
-    "artists.Name",
-    "tracks.AlbumId"
-  ],
-  "playlist_track_playlists_data": [
-    "playlists.PlaylistId",
-    "playlists.Name",
-    "playlist_track.PlaylistId",
-    "playlist_track.TrackId"
+  "orders_data": [
+    "orders.ORDERID",
+    "orders.CUSTOMERID",
+    "orders.NETAMOUNT",
+    "orders.TAX",
+    "orders.TOTALAMOUNT"
   ]
 }

@@ -31,10 +31,10 @@ from collections import defaultdict
 # ============================================================
 
 # Path to your JSON file containing table.column names
-JSON_FILE_PATH = "../output/chinook.db_json.json"
+JSON_FILE_PATH = "../output/ds2_json.json"
 
 # Google Gemini API Key (FREE) - Get from https://aistudio.google.com/app/apikey
-GEMINI_API_KEY = "AIzaSyAXprsvJy44V14AsnqoGRQOtMEaEdEZAdU"  # Replace with your Gemini API key
+GEMINI_API_KEY = "AIzaSyCr9llWTEZ_LYHE_oazT2oLwLC-xgYNJww"  # Replace with your Gemini API key
 
 # [DEPRECATED] OpenAI API Key - Commented out, using Gemini instead
 # OPENAI_API_KEY = "your-openai-api-key-here"

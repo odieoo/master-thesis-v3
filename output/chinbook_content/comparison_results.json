@@ -1,0 +1,121 @@
+{
+  "gemini_table_count": 15,
+  "embedding_table_count": 9,
+  "gemini_total_columns": 122,
+  "embedding_total_columns": 60,
+  "original_columns": 64,
+  "average_similarity": 0.5745801257565962,
+  "high_matches": 7,
+  "perfect_matches": 2,
+  "matches": [
+    {
+      "gemini_table": "genres",
+      "embedding_table": "genres_tracks_data",
+      "similarity": 1.0,
+      "gemini_cols": 2,
+      "common_cols": 2
+    },
+    {
+      "gemini_table": "invoices_by_customer",
+      "embedding_table": "invoices_data",
+      "similarity": 1.0,
+      "gemini_cols": 9,
+      "common_cols": 9
+    },
+    {
+      "gemini_table": "employees_by_id",
+      "embedding_table": "employees_data",
+      "similarity": 0.7647058823529411,
+      "gemini_cols": 17,
+      "common_cols": 13
+    },
+    {
+      "gemini_table": "albums_by_artist",
+      "embedding_table": "albums_artists_tracks_data",
+      "similarity": 0.75,
+      "gemini_cols": 3,
+      "common_cols": 3
+    },
+    {
+      "gemini_table": "playlists_by_id",
+      "embedding_table": "playlist_track_playlists_data",
+      "similarity": 0.6666666666666666,
+      "gemini_cols": 2,
+      "common_cols": 2
+    },
+    {
+      "gemini_table": "albums_by_id",
+      "embedding_table": "albums_artists_tracks_data",
+      "similarity": 0.6,
+      "gemini_cols": 4,
+      "common_cols": 3
+    },
+    {
+      "gemini_table": "customers_by_id",
+      "embedding_table": "customers_data",
+      "similarity": 0.6,
+      "gemini_cols": 15,
+      "common_cols": 9
+    },
+    {
+      "gemini_table": "artists",
+      "embedding_table": "albums_artists_tracks_data",
+      "similarity": 0.5,
+      "gemini_cols": 2,
+      "common_cols": 2
+    },
+    {
+      "gemini_table": "employees_by_manager",
+      "embedding_table": "employees_data",
+      "similarity": 0.46153846153846156,
+      "gemini_cols": 6,
+      "common_cols": 6
+    },
+    {
+      "gemini_table": "invoice_items_by_invoice",
+      "embedding_table": "invoice_items_data",
+      "similarity": 0.45454545454545453,
+      "gemini_cols": 11,
+      "common_cols": 5
+    },
+    {
+      "gemini_table": "tracks_by_album",
+      "embedding_table": "media_types_tracks_data",
+      "similarity": 0.42857142857142855,
+      "gemini_cols": 13,
+      "common_cols": 6
+    },
+    {
+      "gemini_table": "tracks_by_genre",
+      "embedding_table": "media_types_tracks_data",
+      "similarity": 0.42857142857142855,
+      "gemini_cols": 13,
+      "common_cols": 6
+    },
+    {
+      "gemini_table": "tracks_by_id",
+      "embedding_table": "media_types_tracks_data",
+      "similarity": 0.4,
+      "gemini_cols": 14,
+      "common_cols": 6
+    },
+    {
+      "gemini_table": "media_types",
+      "embedding_table": "genres_tracks_data",
+      "similarity": 0.3333333333333333,
+      "gemini_cols": 2,
+      "common_cols": 1
+    },
+    {
+      "gemini_table": "playlist_tracks_by_playlist",
+      "embedding_table": "media_types_tracks_data",
+      "similarity": 0.23076923076923078,
+      "gemini_cols": 9,
+      "common_cols": 3
+    }
+  ],
+  "pca_variance_explained": [
+    0.21132712066173553,
+    0.16241620481014252
+  ]
+}

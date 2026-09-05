@@ -1,0 +1,71 @@
+{
+    "categories": {
+      "CATEGORY": null,
+      "CATEGORYNAME": null
+    },
+    "cust_hist": {
+      "CUSTOMERID": null,
+      "ORDERID": null,
+      "PROD_ID": null
+    },
+    "customers": {
+      "CUSTOMERID": null,
+      "FIRSTNAME": null,
+      "LASTNAME": null,
+      "ADDRESS1": null,
+      "ADDRESS2": null,
+      "CITY": null,
+      "STATE": null,
+      "ZIP": null,
+      "COUNTRY": null,
+      "REGION": null,
+      "EMAIL": null,
+      "PHONE": null,
+      "CREDITCARDTYPE": null,
+      "CREDITCARD": null,
+      "CREDITCARDEXPIRATION": null,
+      "USERNAME": null,
+      "PASSWORD": null,
+      "AGE": null,
+      "INCOME": null,
+      "GENDER": null
+    },
+    "inventory": {
+      "PROD_ID": null,
+      "QUAN_IN_STOCK": null,
+      "SALES": null
+    },
+    "orderlines": {
+      "ORDERLINEID": null,
+      "ORDERID": null,
+      "PROD_ID": null,
+      "QUANTITY": null,
+      "ORDERDATE": null
+    },
+    "orders": {
+      "ORDERID": null,
+      "ORDERDATE": null,
+      "CUSTOMERID": null,
+      "NETAMOUNT": null,
+      "TAX": null,
+      "TOTALAMOUNT": null
+    },
+    "products": {
+      "PROD_ID": null,
+      "CATEGORY": null,
+      "TITLE": null,
+      "ACTOR": null,
+      "PRICE": null,
+      "SPECIAL": null,
+      "COMMON_PROD_ID": null
+    },
+    "reorder": {
+      "PROD_ID": null,
+      "DATE_LOW": null,
+      "QUAN_LOW": null,
+      "DATE_REORDERED": null,
+      "QUAN_REORDERED": null,
+      "DATE_EXPECTED": null
+    }
+  }
+  

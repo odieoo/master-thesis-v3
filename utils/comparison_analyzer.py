@@ -22,7 +22,7 @@ from sentence_transformers import SentenceTransformer
 def compare_migration_approaches(
     gemini_json_path: str,
     embedding_json_path: str,
-    original_columns_path: str = "../output/chinook.db_json.json",
+    original_columns_path: str = "../output/ds2_json.json",
     output_path: str = "../output/comparison_visualization.png"
 ):
     """
@@ -332,7 +332,7 @@ if __name__ == "__main__":
     results = compare_migration_approaches(
         gemini_json_path="../output/gemini_suggested_tables.json",
         embedding_json_path="../output/embedding_suggested_tables.json",
-        original_columns_path="../output/chinook.db_json.json",
+        original_columns_path="../output/ds2_json.json",
         output_path="../output/comparison_visualization.png"
     )
     
